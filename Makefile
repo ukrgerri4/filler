@@ -6,7 +6,8 @@ LIBFT = $(LIB_PATH)libft.a
 FT_PRINTF_PATH = ft_printf/
 FT_PRINTF = $(FT_PRINTF_PATH)libftprintf.a
 
-OBJECTS = filler.o function.o function_2.o function_3.o function_4.o get_next_line.o
+OBJECTS =	filler.o function.o function_2.o function_3.o function_4.o get_next_line.o function_down_left.o function_down_right.o function_top_left.o function_top_right.o
+
 BON_OBJ = color_output.o get_next_line.o
 
 all: $(NAME)

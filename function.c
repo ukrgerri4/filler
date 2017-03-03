@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   function.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikryvenk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 16:12:14 by ikryvenk          #+#    #+#             */
+/*   Updated: 2017/03/03 16:13:26 by ikryvenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
 void	check_player(char *line, t_flist *lst)
@@ -18,7 +30,7 @@ void	check_player(char *line, t_flist *lst)
 	}
 }
 
-int 	check_empty(char c, t_flist *lst)
+int		check_empty(char c, t_flist *lst)
 {
 	if (c == '.')
 		return (0);
@@ -47,7 +59,7 @@ void	check_map_param(char *line, t_flist *lst)
 {
 	int i;
 
-	i = 0;		
+	i = 0;
 	while (!(line[i] >= '0' && line[i] <= '9'))
 		i++;
 	lst->height = ft_atoi(&line[i]);
@@ -60,9 +72,9 @@ void	check_map_param(char *line, t_flist *lst)
 
 char	*check_mapsize(char *line, t_flist *lst)
 {
-	int  	x;
-	int 	y;
-	char 	*tmp;
+	int		x;
+	int		y;
+	char	*tmp;
 
 	check_map_param(line, lst);
 	make_intarr(lst);

@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   color_output.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikryvenk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 16:27:21 by ikryvenk          #+#    #+#             */
+/*   Updated: 2017/03/03 16:45:02 by ikryvenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
 void	check_winner(char *line)
@@ -6,7 +18,7 @@ void	check_winner(char *line)
 	int p1;
 	int p2;
 
-	i = 0;		
+	i = 0;
 	while (!(line[i] >= '0' && line[i] <= '9'))
 		i++;
 	p1 = ft_atoi(&line[i]);
@@ -15,9 +27,9 @@ void	check_winner(char *line)
 		i++;
 	p2 = ft_atoi(&line[i]);
 	if (p1 > p2)
-		ft_printf("\033[1;32mPlayer O - Winner\n\033[0m");
+		ft_printf("\033[1;32mPlr O - Win with %d against %d\n\033[0m", p1, p2);
 	else
-		ft_printf("\033[1;32mPlayer X - Winner\n\033[0m");
+		ft_printf("\033[1;32mPlr X - Win with %d against %d\n\033[0m", p2, p1);
 }
 
 void	print_line(char *line)
@@ -42,7 +54,7 @@ void	print_line(char *line)
 	ft_printf("\n");
 }
 
-int main(void)
+int		main(void)
 {
 	char *line;
 
@@ -58,5 +70,5 @@ int main(void)
 		if (line[0] == '=')
 			check_winner(line);
 	}
-	return 0;
+	return (0);
 }

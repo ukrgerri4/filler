@@ -1,14 +1,31 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   filler.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikryvenk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 16:07:00 by ikryvenk          #+#    #+#             */
+/*   Updated: 2017/03/03 16:08:14 by ikryvenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
+
+void	initialize_lst(t_flist *lst)
+{
+	lst->flag = 0;
+	lst->order = 0;
+}
 
 int		main(void)
 {
-	t_flist				lst;
-	t_figure			*fgr;
-	char 				*line;
+	t_flist		lst;
+	t_figure	*fgr;
+	char		*line;
 
 	fgr = 0;
-	lst.flag = 0;
-	lst.order = 0;
+	initialize_lst(&lst);
 	while (get_next_line(0, &line))
 	{
 		if (line[0] == '$')
@@ -27,5 +44,5 @@ int		main(void)
 			ft_fgr_delete(&fgr);
 		}
 	}
-	return 0;
+	return (0);
 }

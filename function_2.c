@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   function_2.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ikryvenk <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2017/03/03 16:13:31 by ikryvenk          #+#    #+#             */
+/*   Updated: 2017/03/03 16:14:36 by ikryvenk         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
-void	ft_fgr_delete(t_figure **fgr)
+void			ft_fgr_delete(t_figure **fgr)
 {
 	t_figure *tmp;
 
@@ -39,7 +51,7 @@ static t_figure	*create_element(int x, int y, char c)
 	return (result);
 }
 
-static void	element_push_back(t_figure **begin_list, int x, int y, char c)
+static void		element_push_back(t_figure **begin_list, int x, int y, char c)
 {
 	t_figure	*result;
 
@@ -54,7 +66,7 @@ static void	element_push_back(t_figure **begin_list, int x, int y, char c)
 		*begin_list = create_element(x, y, c);
 }
 
-static int			number_of_call_gnl(char *line)
+static int		number_of_call_gnl(char *line)
 {
 	while (*line)
 	{
@@ -65,7 +77,7 @@ static int			number_of_call_gnl(char *line)
 	return (0);
 }
 
-void		check_figure(char *line, t_figure **fgr)
+void			check_figure(char *line, t_figure **fgr)
 {
 	int j;
 	int i;
